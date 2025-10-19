@@ -1,4 +1,3 @@
-
 resource "aws_instance" "terraform" {
     #for_each = var.instances
     for_each = toset(var.instances)

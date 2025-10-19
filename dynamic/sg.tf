@@ -14,7 +14,7 @@ resource "aws_security_group" "roboshop_instance" {
     content{
         from_port        = ingress.value # here ingress is special key word
         to_port          = ingress.value
-        protocol         = "tcp" # -1 means all protocols
+        protocol         = "tcp" # -1 means all protocols #tcp is for set of ports.
         cidr_blocks      = ["0.0.0.0/0"] # internet
     }
   }

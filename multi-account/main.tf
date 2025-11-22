@@ -25,7 +25,7 @@ resource "aws_vpc_peering_connection" "dev_prod" {
   provider = aws.dev 
   peer_owner_id = var.prod # Owner is always acceptor
   peer_vpc_id   = aws_vpc.prod.id # Acceptor
-  vpc_id        = aws_vpc.dev.id
+  vpc_id        = aws_vpc.dev.id #Requestor
   tags = {
     Name = "roboshop-dev-to-prod"
   }
